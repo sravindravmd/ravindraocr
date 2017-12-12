@@ -11,7 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-
+import * as firebase from 'firebase'
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -20,6 +20,20 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+
+  constructor(){
+    super();
+
+      var config = {
+          apiKey: "AIzaSyAhvuDv-ft4aCqzy-f1YaBCDGP3Rcuj7cE",
+          authDomain: "brillioocr.firebaseapp.com",
+          databaseURL: "https://brillioocr.firebaseio.com",
+          projectId: "brillioocr",
+          storageBucket: "",
+          messagingSenderId: "977498727176"
+      };
+      firebase.initializeApp(config);
+  }
   render() {
     return (
       <View style={styles.container}>
