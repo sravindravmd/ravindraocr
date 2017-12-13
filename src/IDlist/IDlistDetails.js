@@ -21,6 +21,7 @@ export default class IDlistHome extends Component{
                     </View>
                 </View>
                 <Text>Details Page</Text>
+
             </View>
         )
     }
